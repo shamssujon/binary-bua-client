@@ -65,9 +65,10 @@ const Header = () => {
 			</div>
 			<div className="bg-blue-900">
 				<div className="container flex justify-between">
-					<div className="flex flex-col items-center lg:flex-row flex-wrap">    
-						{navigation.map((item) => (
+					<div className="flex flex-col flex-wrap items-center lg:flex-row">
+						{navigation.map((item, index) => (
 							<NavLink
+								key={index}
 								to={item.path}
 								className={({ isActive }) =>
 									(isActive
@@ -81,7 +82,7 @@ const Header = () => {
 					</div>
 					<div className="">
 						<Link to={"/login"} className="btn btn-primary h-full rounded-none">
-                            <BsPerson className="w-6 h-6" />
+							<BsPerson className="h-6 w-6" />
 							Account
 						</Link>
 					</div>

@@ -13,12 +13,15 @@
 }
 
 @layer components {
-    .btn {
-        @apply inline-flex items-center text-center justify-center gap-2 px-6 py-3 font-semibold uppercase transition rounded;
-    }
-    
-    .btn-primary {
-        @apply bg-cyan-600 text-white hover:bg-cyan-500;
-    }
-    
+	.btn {
+		@apply inline-flex items-center justify-center gap-2 rounded px-6 py-3 text-center font-semibold uppercase transition;
+	}
+
+	.btn.btn-lg {
+		@apply px-10 py-5;
+	}
+
+	.btn-primary {
+		@apply bg-cyan-600 text-white hover:bg-cyan-500;
+	}
 }
