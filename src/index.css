@@ -4,9 +4,21 @@
 @tailwind utilities;
 
 @layer base {
-    html,
-    body,
-    #root, .App {
-        @apply min-h-screen;
+	html,
+	body,
+	#root,
+	.App {
+		@apply min-h-screen;
+	}
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center text-center justify-center gap-2 px-6 py-3 font-semibold uppercase transition;
     }
+    
+    .btn-primary {
+        @apply bg-cyan-600 text-white hover:bg-cyan-500;
+    }
+    
 }
