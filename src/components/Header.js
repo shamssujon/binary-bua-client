@@ -80,7 +80,7 @@ const Header = () => {
 						))}
 					</div>
 					<div className="">
-						<Link to={"/login"} className="btn btn-primary h-full">
+						<Link to={"/login"} className="btn btn-primary h-full rounded-none">
                             <BsPerson className="w-6 h-6" />
 							Account
 						</Link>
