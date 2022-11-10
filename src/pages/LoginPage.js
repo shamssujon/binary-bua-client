@@ -8,7 +8,13 @@ const LoginPage = () => {
 	const { loginUser, googleSignIn, successToast, errorToast } = useContext(AuthContext);
 
 	// Email/password login
-	const { register, handleSubmit } = useForm();
+	const {
+		register,
+		handleSubmit,
+		watch,
+		formState: { errors },
+	} = useForm();
+
 	const onSubmit = (userCredentials) => {
 		const { email, password } = userCredentials;
 
@@ -52,9 +58,12 @@ const LoginPage = () => {
 							<input
 								id="email"
 								type="email"
-								{...register("email")}
+								{...register("email", { required: true })}
 								className="block w-full rounded border px-4 py-2 text-lg focus:outline-2 focus:outline-cyan-600"
 							/>
+							{errors.email && (
+								<p className="text-sm text-rose-500">Email is required</p>
+							)}
 						</div>
 						<div className="grid gap-2">
 							<label htmlFor="password" className="font-bold">
@@ -63,9 +72,17 @@ const LoginPage = () => {
 							<input
 								id="password"
 								type="password"
-								{...register("password")}
+								{...register("password", {
+									required: {
+										value: true,
+										message: "Password is required",
+									},
+								})}
 								className="block w-full rounded border px-4 py-2 text-lg focus:outline-2 focus:outline-cyan-600"
 							/>
+							{errors.password && (
+								<p className="text-sm text-rose-500">{errors.password.message}</p>
+							)}
 						</div>
 						<input
 							type="submit"
