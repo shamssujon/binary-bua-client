@@ -12,7 +12,7 @@ import logo from "../assets/images/logo.svg";
 
 const Footer = () => {
 	return (
-		<footer className="bg-blue-900 text-white">
+		<footer className="bg-slate-800 text-white">
 			<div className="container">
 				<div className="grid gap-8 py-10 md:grid-cols-2 lg:grid-cols-4">
 					<div className="">

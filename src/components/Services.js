@@ -13,16 +13,18 @@ const Services = () => {
 	return (
 		<section className="py-10 md:py-20">
 			<div className="container">
-				<h2 className="text-center text-4xl font-bold mb-8">Popular Services</h2>
+				<h2 className="mb-8 text-center text-4xl font-bold">Popular Services</h2>
 
-				<div className="services grid lg:grid-cols-3 gap-8">
+				<div className="services grid gap-8 lg:grid-cols-3">
 					{services.map((service) => (
 						<ServiceCard key={service._id} service={service} />
 					))}
 				</div>
 
-				<div className="text-center mt-10">
-				<Link to={"/services"} className="btn btn-secondary btn-lg">See all services</Link>
+				<div className="mt-10 text-center">
+					<Link to={"/services"} className="btn btn-secondary btn-lg">
+						See all services
+					</Link>
 				</div>
 			</div>
 		</section>
