@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { BsEnvelope, BsFillPersonFill, BsGeoAlt, BsPerson, BsTelephone } from "react-icons/bs";
-import { BsMoon, BsSun } from "react-icons/bs";
+import React, { useContext, useState } from "react";
+import { BsEnvelope, BsFillPersonFill, BsGeoAlt, BsTelephone } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
-import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
+
 const Header = () => {
 	const [menuActive, setMenuActive] = useState(false);
 	const [profileBtnActive, setProfileBtnActive] = useState(false);

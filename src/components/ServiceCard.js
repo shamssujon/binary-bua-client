@@ -2,18 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-	const { title, image, description } = service;
+	const { _id, title, price, image, description } = service;
 	return (
-		<div className="service border bg-white p-4 rounded">
-			<div className="aspect-6/4 overflow-hidden mb-4">
-				<img src={image} alt="" className="h-full w-full object-cover" />
+		<div className="service rounded border bg-white p-6 flex flex-col justify-between">
+			<div className="mb-4 aspect-6/4 overflow-hidden">
+				<img src={image} alt="" className="h-full w-full object-cover rounded-t" />
 			</div>
-			<h4 className="text-2xl mb-2">{title}</h4>
-			<p className="mb-3">{description}</p>
-			<p>Price: Starts from 100 taka / hour</p>
-			<Link to={"/services/service"} className="btn btn-primary mt-4">
-				Details
-			</Link>
+			<div className="mb-4 flex-1">
+				<h4 className="mb-2 text-2xl font-bold">{title}</h4>
+				<p className="text-lg">
+					{description.length > 100 ? description.slice(0, 100) + "..." : description}
+				</p>
+			</div>
+			<div>
+				<p className="text-lg font-bold">Price: {price}</p>
+				<Link to={`/services/service/${_id}`} className="btn btn-primary mt-4 w-full">
+					Details
+				</Link>
+			</div>
 		</div>
 	);
 };
