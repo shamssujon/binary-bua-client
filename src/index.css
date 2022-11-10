@@ -24,4 +24,12 @@
 	.btn-primary {
 		@apply bg-cyan-600 text-white hover:bg-cyan-500;
 	}
+
+	.btn-secondary {
+		@apply bg-blue-900 text-white hover:bg-blue-800;
+	}
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+	@apply static mt-4
 }

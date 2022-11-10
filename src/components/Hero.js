@@ -1,21 +1,22 @@
 import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import sliderImg1 from "../assets/images/hero/1.jpg";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import sliderImg1 from "../assets/images/hero/1.jpg";
 // Import Swiper styles
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Link } from "react-router-dom";
 const Hero = () => {
 	return (
 		<div>
 			<Swiper
 				// install Swiper modules
 				modules={[Navigation, Pagination, Scrollbar, A11y]}
-				spaceBetween={50}
+				spaceBetween={40}
 				slidesPerView={1}
+				rewind={true}
 				navigation
 				pagination={{ clickable: true }}>
 				<SwiperSlide>
@@ -27,9 +28,9 @@ const Hero = () => {
 						/>
 						<div className="absolute inset-0 -z-10 h-full w-full bg-cyan-900 mix-blend-multiply"></div>
 						<div className="container relative z-10">
-							<div className="mx-auto w-1/2 text-center text-white">
+							<div className="mx-auto text-center text-white lg:w-1/2">
 								<h1 className="mb-4 text-6xl font-bold leading-tight">
-									All in one, multitalented, house maid in the world
+									Multitalented helping hand for your service
 								</h1>
 								<p className="mb-8 text-xl leading-normal">
 									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
