@@ -1,17 +1,22 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../contexts/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const LoginPage = () => {
 	const { loginUser, googleSignIn, successToast, errorToast } = useContext(AuthContext);
+
+	const location = useLocation();
+	const navigate = useNavigate();
+	const from = location.state?.from?.pathname || "/";
 
 	// Email/password login
 	const {
 		register,
 		handleSubmit,
 		watch,
+		reset,
 		formState: { errors },
 	} = useForm();
 
@@ -22,7 +27,10 @@ const LoginPage = () => {
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
+				reset();
 				successToast("Logged in successfully");
+				// Navigate user back to where they came from
+				navigate(from, { replace: true });
 			})
 			.catch((error) => {
 				console.error(error);
@@ -37,6 +45,8 @@ const LoginPage = () => {
 				const user = result.user;
 				console.log(user);
 				successToast("Logged in with google");
+				// Navigate user back to where they came from
+				navigate(from, { replace: true });
 			})
 			.catch((error) => {
 				console.error(error);

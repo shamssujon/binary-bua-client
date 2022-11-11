@@ -9,6 +9,7 @@ import ServicesPage from "pages/ServicesPage";
 import UserServicesPage from "pages/UserServicesPage";
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
 	{
@@ -41,16 +42,19 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: "/services/service/add",
-				element: <AddServicePage></AddServicePage>,
+				element: (
+					<PrivateRoutes>
+						<AddServicePage></AddServicePage>
+					</PrivateRoutes>
+				),
 			},
 			{
 				path: "/user_services",
-				element: <UserServicesPage></UserServicesPage>,
-				loader: async ({ params }) => {
-					return fetch(
-						`https://binary-bua-server.vercel.app/services?email=${params.email}`
-					);
-				},
+				element: (
+					<PrivateRoutes>
+						<UserServicesPage></UserServicesPage>
+					</PrivateRoutes>
+				),
 			},
 			{
 				path: "/login",

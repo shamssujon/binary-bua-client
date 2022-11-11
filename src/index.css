@@ -28,6 +28,10 @@
 	.btn-secondary {
 		@apply bg-blue-900 text-white hover:bg-blue-800;
 	}
+
+	.btn-danger {
+		@apply bg-rose-600 text-white hover:bg-rose-500;
+	}
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service, children }) => {
 	const { _id, title, price, imageURL, description } = service;
 	return (
-		<div className="service rounded border bg-white p-6 flex flex-col justify-between">
+		<div className="service flex flex-col justify-between rounded border bg-white p-6">
 			<div className="mb-4 aspect-6/4 overflow-hidden">
-				<img src={imageURL} alt="" className="h-full w-full object-cover rounded-t" />
+				<img src={imageURL} alt="" className="h-full w-full rounded-t object-cover" />
 			</div>
 			<div className="mb-4 flex-1">
 				<h4 className="mb-2 text-2xl font-bold">{title}</h4>
@@ -20,6 +20,7 @@ const ServiceCard = ({ service }) => {
 					Details
 				</Link>
 			</div>
+			{children}
 		</div>
 	);
 };
