@@ -9,7 +9,7 @@ const ServiceDetailsPage = () => {
 	return (
 		<>
 			<ServiceDetails service={serviceData}></ServiceDetails>
-            <CustomerReviews></CustomerReviews>
+            <CustomerReviews service={serviceData}></CustomerReviews>
 			<AddReview service={serviceData}></AddReview>
 		</>
 	);

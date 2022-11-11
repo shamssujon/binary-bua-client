@@ -1,55 +1,35 @@
-import React from "react";
+import { AuthContext } from "../contexts/AuthProvider";
+import React, { useContext, useEffect, useState } from "react";
+import ReviewCard from "./ReviewCard";
 
-const CustomerReviews = () => {
+const CustomerReviews = ({ service }) => {
+	const [reviews, setReviews] = useState([]);
+	useEffect(() => {
+		fetch(`http://localhost:7700/reviews?id=${service._id}`)
+			.then((res) => res.json())
+			.then((data) => {
+				setReviews(data);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, [service._id]);
 	return (
 		<section className="py-10">
 			<div className="container">
-				<h2 className="text-center text-4xl font-bold mb-8">Customer Reviews</h2>
+				<h2 className="mb-8 text-center text-4xl font-bold">
+					Customer Reviews: {reviews?.length}
+				</h2>
 
-				<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-					<div className="h-full rounded border bg-white p-8 text-center shadow-md shadow-slate-500/10">
-						<div>
-							<img
-								src="https://www.dhakamaidagency.com/images/resource/author-1.jpg"
-								alt=""
-								className="mx-auto mb-3 block h-20 w-20 rounded-full border-4 border-blue-900/50 object-cover"
-							/>
-							<h6 className="text-lg font-bold text-blue-900">review.author</h6>
-                            <p>sujon322@gmail.com</p>
-						</div>
-						<div className="mt-4">
-							<p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit debitis vero ea tempora animi ad. Culpa architecto voluptatibus voluptas animi!</p>
-						</div>
+				{reviews.length === 0 ? (
+					<p className="text-center text-xl">No reviews yet :(</p>
+				) : (
+					<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+						{reviews.map((review) => (
+							<ReviewCard key={review._id} review={review}></ReviewCard>
+						))}
 					</div>
-					<div className="h-full rounded border bg-white p-8 text-center shadow-md shadow-slate-500/10">
-						<div>
-							<img
-								src="https://www.dhakamaidagency.com/images/resource/author-1.jpg"
-								alt=""
-								className="mx-auto mb-3 block h-20 w-20 rounded-full border-4 border-blue-900/50 object-cover"
-							/>
-							<h6 className="text-lg font-bold text-blue-900">review.author</h6>
-                            <p>sujon322@gmail.com</p>
-						</div>
-						<div className="mt-4">
-							<p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit debitis vero ea tempora animi ad. Culpa architecto voluptatibus voluptas animi!</p>
-						</div>
-					</div>
-					<div className="h-full rounded border bg-white p-8 text-center shadow-md shadow-slate-500/10">
-						<div>
-							<img
-								src="https://www.dhakamaidagency.com/images/resource/author-1.jpg"
-								alt=""
-								className="mx-auto mb-3 block h-20 w-20 rounded-full border-4 border-blue-900/50 object-cover"
-							/>
-							<h6 className="text-lg font-bold text-blue-900">review.author</h6>
-                            <p>sujon322@gmail.com</p>
-						</div>
-						<div className="mt-4">
-							<p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit debitis vero ea tempora animi ad. Culpa architecto voluptatibus voluptas animi!</p>
-						</div>
-					</div>
-				</div>
+				)}
 			</div>
 		</section>
 	);

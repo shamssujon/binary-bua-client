@@ -2,7 +2,8 @@ import { AuthContext } from "../contexts/AuthProvider";
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 const AddReview = ({ service }) => {
-	const { user } = useContext(AuthContext);
+	const { user, successToast, errorToast } = useContext(AuthContext);
+    console.log(user);
 	const {
 		register,
 		handleSubmit,
@@ -32,6 +33,14 @@ const AddReview = ({ service }) => {
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
+				if (data.acknowledged) {
+					reset();
+					successToast("Your review is added successfully");
+				}
+			})
+			.catch((error) => {
+				console.log(error);
+				errorToast(error);
 			});
 	};
 
