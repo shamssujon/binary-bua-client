@@ -1,3 +1,4 @@
+import AddReview from "components/AddReview";
 import CustomerReviews from "components/CustomerReviews";
 import ServiceDetails from "components/ServiceDetails";
 import React from "react";
@@ -9,6 +10,7 @@ const ServiceDetailsPage = () => {
 		<>
 			<ServiceDetails service={serviceData}></ServiceDetails>
             <CustomerReviews></CustomerReviews>
+			<AddReview service={serviceData}></AddReview>
 		</>
 	);
 };
