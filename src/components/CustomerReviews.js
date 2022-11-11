@@ -5,7 +5,7 @@ import ReviewCard from "./ReviewCard";
 const CustomerReviews = ({ service }) => {
 	const [reviews, setReviews] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:7700/reviews?id=${service._id}`)
+		fetch(`https://binary-bua-server.vercel.app/reviews?id=${service._id}`)
 			.then((res) => res.json())
 			.then((data) => {
 				setReviews(data);
