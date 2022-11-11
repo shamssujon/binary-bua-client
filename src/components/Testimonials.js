@@ -50,8 +50,8 @@ const Testimonials = () => {
 						rewind={true}
 						navigation
 						pagination={{ clickable: true }}>
-						{reviews.map((review) => (
-							<SwiperSlide className="h-auto">
+						{reviews.map((review, index) => (
+							<SwiperSlide key={index} className="h-auto">
 								<div className="h-full rounded border bg-white p-8 text-center shadow-md shadow-slate-500/10">
 									<div>
 										<img

@@ -10,7 +10,7 @@ const ServicesPage = () => {
 			<div className="container">
 				<div className="mb-8 flex flex-wrap items-center justify-between gap-4">
 					<h2 className="text-3xl font-bold md:text-4xl">All Services</h2>
-					<Link to={"/"} className="btn btn-primary">
+					<Link to={"/services/service/add"} className="btn btn-primary">
 						<BsPlusLg />
 						Add a new service
 					</Link>

@@ -1,4 +1,5 @@
 import MainLayout from "layouts/MainLayout";
+import AddServicePage from "pages/AddServicePage";
 import ErrorPage from "pages/ErrorPage";
 import HomePage from "pages/HomePage";
 import LoginPage from "pages/LoginPage";
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
 						`https://binary-bua-server.vercel.app/services/service/${params.id}`
 					);
 				},
+			},
+			{
+				path: "/services/service/add",
+				element: <AddServicePage></AddServicePage>,
 			},
 			{
 				path: "/login",

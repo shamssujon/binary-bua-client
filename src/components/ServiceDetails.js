@@ -3,16 +3,16 @@ import { BsTelephone } from "react-icons/bs";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const ServiceDetails = ({ service }) => {
-	const { title, image, price, description, _id } = service;
+	const { title, imageURL, price, description, _id } = service;
 	return (
 		<section className="py-10">
 			<div className="container">
 				<div className="grid gap-6 rounded-lg border bg-white p-6 lg:grid-cols-2 lg:gap-10">
 					<PhotoProvider>
 						<div className="aspect-6/4 overflow-hidden rounded-lg">
-							<PhotoView src={image}>
+							<PhotoView src={imageURL}>
 								<img
-									src={image}
+									src={imageURL}
 									alt=""
 									className="h-full w-full cursor-zoom-in object-cover"
 								/>
@@ -22,7 +22,7 @@ const ServiceDetails = ({ service }) => {
 					<div className="">
 						<h3 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h3>
 						<p className="mb-4">{description}</p>
-						<p className="mb-4 text-xl font-bold">Price: {price}</p>
+						<p className="mb-4 text-xl font-bold">Price: starts from {price} taka / hour</p>
 
 						<a
 							href="tel:+8801780691149"
