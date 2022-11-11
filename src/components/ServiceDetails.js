@@ -11,7 +11,11 @@ const ServiceDetails = ({ service }) => {
 					<PhotoProvider>
 						<div className="aspect-6/4 overflow-hidden rounded-lg">
 							<PhotoView src={image}>
-								<img src={image} alt="" className="h-full w-full object-cover" />
+								<img
+									src={image}
+									alt=""
+									className="h-full w-full cursor-zoom-in object-cover"
+								/>
 							</PhotoView>
 						</div>
 					</PhotoProvider>
