@@ -1,5 +1,4 @@
-import { AuthContext } from "../contexts/AuthProvider";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
 
 const CustomerReviews = ({ service }) => {

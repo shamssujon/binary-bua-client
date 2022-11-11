@@ -126,7 +126,7 @@ const Header = () => {
 											<li>
 												<Link
 													className="block px-4 py-2 font-semibold uppercase hover:bg-cyan-600 hover:text-white"
-													to={"/userreviews"}>
+													to={"/user_reviews"}>
 													My Reviews
 												</Link>
 											</li>
@@ -280,7 +280,7 @@ const Header = () => {
 										<li>
 											<Link
 												className="block px-4 py-2 font-semibold uppercase hover:bg-cyan-600 hover:text-white"
-												to={"/userreviews"}>
+												to={"/user_reviews"}>
 												My Reviews
 											</Link>
 										</li>

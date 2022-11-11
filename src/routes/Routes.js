@@ -7,6 +7,7 @@ import LoginPage from "pages/LoginPage";
 import RegisterPage from "pages/RegisterPage";
 import ServiceDetailsPage from "pages/ServiceDetailsPage";
 import ServicesPage from "pages/ServicesPage";
+import UserReviews from "pages/UserReviews";
 import UserServicesPage from "pages/UserServicesPage";
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
@@ -71,6 +72,14 @@ export const router = createBrowserRouter([
 				loader: async () => {
 					return fetch(`https://binary-bua-server.vercel.app/blogs`);
 				},
+			},
+			{
+				path: "/user_reviews",
+				element: (
+					<PrivateRoutes>
+						<UserReviews></UserReviews>
+					</PrivateRoutes>
+				),
 			},
 		],
 	},

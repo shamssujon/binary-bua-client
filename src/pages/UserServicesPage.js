@@ -1,7 +1,6 @@
-import { AuthContext } from "../contexts/AuthProvider";
-import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import ServiceCard from "components/ServiceCard";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const UserServicesPage = () => {
 	const { user } = useContext(AuthContext);
