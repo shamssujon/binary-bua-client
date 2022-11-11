@@ -1,11 +1,12 @@
 import {
-    createUserWithEmailAndPassword,
-    getAuth,
-    GoogleAuthProvider,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signInWithPopup,
-    signOut
+	createUserWithEmailAndPassword,
+	getAuth,
+	GoogleAuthProvider,
+	onAuthStateChanged,
+	signInWithEmailAndPassword,
+	signInWithPopup,
+	signOut,
+	updateProfile
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -51,6 +52,12 @@ const AuthProvider = ({ children }) => {
 		return signOut(auth);
 	};
 
+	// Update User name and photo
+	const updateUserProfile = (profile) => {
+		setLoading(true);
+		return updateProfile(auth.currentUser, profile);
+	};
+
 	// Observer
 	useEffect(() => {
 		const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -72,6 +79,7 @@ const AuthProvider = ({ children }) => {
 		googleSignIn,
 		successToast,
 		errorToast,
+		updateUserProfile,
 	};
 	return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

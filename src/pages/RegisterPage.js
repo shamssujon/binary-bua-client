@@ -5,7 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const RegisterPage = () => {
-	const { createUser, googleSignIn, successToast, errorToast } = useContext(AuthContext);
+	const { createUser, googleSignIn, successToast, errorToast, updateUserProfile } =
+		useContext(AuthContext);
 
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -19,14 +20,25 @@ const RegisterPage = () => {
 		formState: { errors },
 	} = useForm();
 
+	const handleUpdateUserProfile = (name, photoUrl) => {
+		const profile = {
+			displayName: name,
+			photoURL: photoUrl,
+		};
+		updateUserProfile(profile)
+			.then(() => {})
+			.catch((e) => console.error(e));
+	};
+
 	const onSubmit = (userCredentials) => {
-		const { name, email, password } = userCredentials;
+		const { name, photoUrl, email, password } = userCredentials;
 
 		createUser(email, password)
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
 				successToast("Account created successfully!");
+				handleUpdateUserProfile(name, photoUrl);
 				// Navigate user back to where they came from
 				navigate(from, { replace: true });
 			})
@@ -72,6 +84,17 @@ const RegisterPage = () => {
 							{errors.name && (
 								<p className="text-sm text-rose-500">Name is required</p>
 							)}
+						</div>
+						<div className="grid gap-2">
+							<label htmlFor="photoUrl" className="font-bold">
+								Photo URL
+							</label>
+							<input
+								id="photoUrl"
+								type="text"
+								{...register("photoUrl")}
+								className="block w-full rounded border px-4 py-2 text-lg focus:outline-2 focus:outline-cyan-600"
+							/>
 						</div>
 						<div className="grid gap-2">
 							<label htmlFor="email" className="font-bold">
