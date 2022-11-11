@@ -40,3 +40,7 @@
 .swiper-pagination-fraction {
 	@apply static mt-4;
 }
+
+.article-card ol{
+	@apply space-y-4 list-decimal list-inside
+}

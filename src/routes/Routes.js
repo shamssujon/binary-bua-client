@@ -1,5 +1,6 @@
 import MainLayout from "layouts/MainLayout";
 import AddServicePage from "pages/AddServicePage";
+import BlogPage from "pages/BlogPage";
 import ErrorPage from "pages/ErrorPage";
 import HomePage from "pages/HomePage";
 import LoginPage from "pages/LoginPage";
@@ -63,6 +64,13 @@ export const router = createBrowserRouter([
 			{
 				path: "/register",
 				element: <RegisterPage></RegisterPage>,
+			},
+			{
+				path: "/blog",
+				element: <BlogPage></BlogPage>,
+				loader: async () => {
+					return fetch(`https://binary-bua-server.vercel.app/blogs`);
+				},
 			},
 		],
 	},
