@@ -15,7 +15,7 @@ const ServiceCard = ({ service }) => {
 				</p>
 			</div>
 			<div>
-				<p className="text-lg font-bold">Price: {price}</p>
+				<p className="text-lg font-bold">Price: starts from {price} taka / hour</p>
 				<Link to={`/services/service/${_id}`} className="btn btn-primary mt-4 w-full">
 					Details
 				</Link>

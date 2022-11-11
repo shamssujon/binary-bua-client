@@ -6,6 +6,7 @@ import LoginPage from "pages/LoginPage";
 import RegisterPage from "pages/RegisterPage";
 import ServiceDetailsPage from "pages/ServiceDetailsPage";
 import ServicesPage from "pages/ServicesPage";
+import UserServicesPage from "pages/UserServicesPage";
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -41,6 +42,15 @@ export const router = createBrowserRouter([
 			{
 				path: "/services/service/add",
 				element: <AddServicePage></AddServicePage>,
+			},
+			{
+				path: "/user_services",
+				element: <UserServicesPage></UserServicesPage>,
+				loader: async ({ params }) => {
+					return fetch(
+						`https://binary-bua-server.vercel.app/services?email=${params.email}`
+					);
+				},
 			},
 			{
 				path: "/login",

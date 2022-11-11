@@ -1,17 +1,20 @@
-import React from "react";
+import { AuthContext } from "../contexts/AuthProvider";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 
 const AddServicePage = () => {
+	const { user, successToast } = useContext(AuthContext);
 	// Add a service
 	const {
 		register,
 		handleSubmit,
 		watch,
+        reset,
 		formState: { errors },
 	} = useForm();
 
 	const onSubmit = (serviceData) => {
-		console.log(serviceData);
+		serviceData.customerEmail = user?.email;
 
 		fetch("https://binary-bua-server.vercel.app/services/service/add", {
 			method: "POST",
@@ -23,6 +26,11 @@ const AddServicePage = () => {
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
+
+				if (data.acknowledged) {
+					successToast("Service added successfully");
+                    reset();
+				}
 			});
 	};
 	return (
@@ -101,7 +109,9 @@ const AddServicePage = () => {
 								className="block w-full rounded border px-4 py-2 text-lg focus:outline-2 focus:outline-cyan-600"></textarea>
 
 							{errors.description && (
-								<p className="text-sm text-rose-500">{errors.description.message}</p>
+								<p className="text-sm text-rose-500">
+									{errors.description.message}
+								</p>
 							)}
 						</div>
 						<input

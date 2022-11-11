@@ -133,8 +133,8 @@ const Header = () => {
 											<li>
 												<Link
 													className="block px-4 py-2 font-semibold uppercase hover:bg-cyan-600 hover:text-white"
-													to={"/addservice"}>
-													Add Service
+													to={"/user_services"}>
+													My Services
 												</Link>
 											</li>
 											<li>
@@ -287,8 +287,8 @@ const Header = () => {
 										<li>
 											<Link
 												className="block px-4 py-2 font-semibold uppercase hover:bg-cyan-600 hover:text-white"
-												to={"/addservice"}>
-												Add Service
+												to={"/user_services"}>
+												My Services
 											</Link>
 										</li>
 										<li>
