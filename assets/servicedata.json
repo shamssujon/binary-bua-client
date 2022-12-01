@@ -1,0 +1,94 @@
+[
+    {
+      "_id": "636d7c9bb2ebcf3d82f9b96d",
+      "title": "Cooking",
+      "price": "Starting from 50 taka / hour",
+      "description": "A good cook isn't who uses best ingredient to cook a good meal, but uses good ingredient to cook best meal. I understand the importance of a good cook in our house. I believe cooking with love provides food for the soul and Hiring an ideal cook is not an easy Job! the cook needs to understand your tastes, preferences & also your way of cooking meals. Domestic cook is all about that, making the dishes as per your style, taste & preference. Binary Bua provides you a hassle-free experience of a COOK of your choice, ensuring the quality and reliability of my service to be consistent to our Mission & Vision. I understand your requirement carefully and provide you housecook service as per your demand, in an utmost urgent and transparent manner. No matter what your requirement is, I have a strong confidence that will close your requirement faster than any other platform in the city.",
+      "imageURL": "https://raw.githubusercontent.com/shamssujon/binary-bua-images/main/cook.jpg",
+      "customerEmail": "sujon2762@gmail.com"
+    },
+    {
+      "_id": "636d7c9bb2ebcf3d82f9b96e",
+      "title": "House cleaning",
+      "price": "Starting from 70 taka / hour",
+      "description": "Removal of cobwebs, Cleaning of panes, grills, windows and window channels. Steam machine cleaning of floor Vacuuming of sofa, chairs, mattresses, carpets, curtains. Cleaning and disinfection of washrooms. Cleaning of door handles, bulbs, switchboard, tubes and fans. Dusting of Gadgets. De-greasing of kitchen area. Cleaning of cabinets and wardrobes externally. Fridge, microwave and chimney exterior cleaning",
+      "imageURL": "https://raw.githubusercontent.com/shamssujon/binary-bua-images/main/house_cleaning.jpg",
+      "customerEmail": "sujon2762@gmail.com"
+    },
+    {
+      "_id": "636d7c9bb2ebcf3d82f9b96f",
+      "title": "Laundry",
+      "price": "Starting from 30 taka / hour",
+      "description": "When you use my professional wash and fold services, you can be sure that your clothes will be well taken care of because I have served my customers in USA for over 10 years and I understand your needs. Unlike other lesser quality cleaners, my full service laundry employs eco-friendly methods and I treat your laundry with great care. All my products are chlorine-free. I use free and clear bleach for whites. I use custom detergent, an in-wash detergent booster (more CLEANING POWER) and downy fabric softener, free and clear dryer sheets.",
+      "imageURL": "https://raw.githubusercontent.com/shamssujon/binary-bua-images/main/laundry.jpg",
+      "customerEmail": "sujon2762@gmail.com"
+    },
+    {
+      "_id": "636d7c9bb2ebcf3d82f9b970",
+      "title": "Nursing",
+      "price": "Starting from 80 taka / hour",
+      "description": "Having a home nurse care for an ailing family member is not uncommon. Hiring a competent home nurse allows patients to stay in familiar surroundings and ensures they are not mistreated in a nursing facility. Me, the Binary Bua, provides services to assist the doctor's care on a daily basis. Complete Physician-Ordered Treatments, Check Medication, Check Medication, Maintain Medical Equipment, Take Care of Sanitary Needs.",
+      "imageURL": "https://raw.githubusercontent.com/shamssujon/binary-bua-images/main/nursing.jpg"
+    },
+    {
+      "_id": "636d7c9bb2ebcf3d82f9b971",
+      "title": "Baby care",
+      "price": "Starting from 40 taka / hour",
+      "description": "Parents who employ a babysitter expect that the individual will have the knowledge, experience and abilities to perform the basic tasks that will allow the parents to confidently leave their child in the babysitter's care.",
+      "imageURL": "https://raw.githubusercontent.com/shamssujon/binary-bua-images/main/baby_care.jpg"
+    },
+    {
+      "_id": "636d7c9bb2ebcf3d82f9b972",
+      "title": "Elderly care",
+      "price": "Starting from 120 taka / hour",
+      "description": "Just as parents take care of their children with love and affection in their childhood, parents also need the same warmth, love, and attention in their old age. But there may come a time when giving much-needed attention to them becomes difficult due to a fast-paced lifestyle. In such a case the best way to show them your care and affection is hiring Elder Caregiver for them. GK Maid Services believe in the saying 'To care for those who once cared for us is one of the highest honor' and having empathy towards our elders, we connect you to those with similar thoughts.",
+      "imageURL": "https://raw.githubusercontent.com/shamssujon/binary-bua-images/main/old_care.jpg"
+    },
+    {
+      "_id": "636dd57047b5fec8f205e1e9",
+      "title": "Caretaker",
+      "price": "100",
+      "imageURL": "https://www.dhakamaidagency.com/images/11.jpeg",
+      "description": "Housmaid is one of the most trusted and leading company in housekeeping and facility management domain company, which provide professional housekeeping services in Gurgaon. Keeping Quality as our core value within a short period of time we have become one of the best service provider in Gurgaon. We are 100% committed to our client needs which gives best customer experience as well as satisfactory results. Our services include housekeeping services for corporates, schools, colleges, hospitals, malls and other places.  We at Housmaid help customers to book a housekeeping services through a single click without any hassle. We are staffed with a young and passionate individuals working to satisfy client needs through best in class housekeeping services."
+    },
+    {
+      "_id": "636de8065d1c0d4323cec18f",
+      "title": "test",
+      "price": "1000",
+      "imageURL": "https://www.dhakamaidagency.com/images/11.jpeg",
+      "description": "In 2007, entrepreneur Atiqur Rahman brought Asha Maid to give busy Bangladesh homeowners a reliable, professional, affordable solution to messy and dirty houses.\n\nToday, there are more than 30000 individual worker Asha Maid cleaning service operating across the Bangladesh. Last year, we performed 20000 cleaning services, 90 percent of which were for repeat customers."
+    },
+    {
+      "_id": "636de86b5d1c0d4323cec190",
+      "title": "test 2",
+      "price": "200",
+      "imageURL": "https://www.dhakamaidagency.com/images/11.jpeg",
+      "description": "e listen to what you are looking for and guide and advise you on the most suitable type of help for you. We carefully match your requirements with the right candidates and won’t waste your time sending you ",
+      "customerEmail": "sujon2762@gmail.com"
+    },
+    {
+      "_id": "636de9d47b9dbbb83ad5e14f",
+      "title": "teset",
+      "price": "45",
+      "imageURL": "https://www.dhakamaidagency.com/images/11.jpeg",
+      "description": "test",
+      "customerEmail": "sujon2762@gmail.com"
+    },
+    {
+      "_id": "636deb3fdc0d9bbcfdb23deb",
+      "title": "teset",
+      "price": "45",
+      "imageURL": "https://www.dhakamaidagency.com/images/11.jpeg",
+      "description": "test",
+      "customerEmail": "sujon2762@gmail.com"
+    },
+    {
+      "_id": "636dec9a7cf195f53efd749e",
+      "title": "test with date",
+      "price": "10",
+      "imageURL": "https://www.dhakamaidagency.com/images/11.jpeg",
+      "description": "lorem10",
+      "customerEmail": "sujon2762@gmail.com",
+      "dateAdded": "2022-11-11T06:32:58.460Z"
+    }
+  ]
